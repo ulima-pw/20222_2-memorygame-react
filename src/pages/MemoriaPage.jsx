@@ -2,9 +2,9 @@ import Board from "../components/Board"
 import Header from "../components/Header"
 
 const MemoriaPage = () => {
-    return <div>
+    return <div className="container">
         <Header />
-        <Board />
+        <Board numRows={ 8 } numCols={ 2 }/>
     </div>
 }
 
