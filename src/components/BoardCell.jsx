@@ -1,14 +1,12 @@
 import React from "react"
-import { useState } from "react"
-
-
 
 const BoardCell = (props) => {
     // Variable de estado
-    const [ showEmoji, setShowEmoji ] = useState(false)
+    //const [ showEmoji, setShowEmoji ] = useState(false)
 
     const butOnClick = () => {
-        setShowEmoji(true)
+        //setShowEmoji(true)
+        props.mostrarCasillaOnClick(props.fila, props.col)
         console.log(`Click en (${props.fila},${props.col})`)
     }
 
@@ -19,7 +17,7 @@ const BoardCell = (props) => {
             {
                 // Operador ternario
                 //<EXP_BOOLEANA> ? VALOR SI ES TRUE : VALOR SI ES FALSE
-                showEmoji === true ? props.cellData.emoji : ""
+                props.cellData.seMuestra === true ? props.cellData.emoji : ""
             }
             
         </button>

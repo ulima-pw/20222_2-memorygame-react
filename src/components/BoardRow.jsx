@@ -6,9 +6,11 @@ const BoardRow = (props) => {
         { 
             Array(props.numCols).fill(0).map((_, index) => {
                 return <BoardCell 
+                            key={ `cell_${index}` }
                             col={index} 
                             fila={props.fila}
-                            cellData={ props.rowData[index] }/>
+                            cellData={ props.rowData[index] }
+                            mostrarCasillaOnClick={ props.mostrarCasillaOnClick }/>
             }) 
         }
     </div>

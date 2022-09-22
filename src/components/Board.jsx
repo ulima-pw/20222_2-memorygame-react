@@ -16,9 +16,11 @@ const Board = (props) => {
     const arrCeros = Array(props.numRows).fill(0)
     const arrBoardRows = arrCeros.map(( _ , index) => {
         return <BoardRow 
+                    key={ `row_${index}` }
                     fila={index} 
                     numCols={ props.numCols }
-                    rowData={ props.boardData[index] }/>
+                    rowData={ props.boardData[index] }
+                    mostrarCasillaOnClick={ props.mostrarCasillaOnClick }/>
     })
     return <div>
         { arrBoardRows }
